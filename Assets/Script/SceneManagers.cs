@@ -21,7 +21,7 @@ public class SceneManagers : MonoBehaviour
 
     private SceneObject currentScene;
 
-    int indextextScene = 0;
+    int indextextScene = 0;//
 
     public void startGame()
     {
