@@ -23,17 +23,6 @@ public class SceneManagers : MonoBehaviour
 
     int indextextScene = 0;
 
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     public void startGame()
     {
         sceneGame.SetActive(true);
