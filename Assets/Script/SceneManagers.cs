@@ -28,7 +28,7 @@ public class SceneManagers : MonoBehaviour
         sceneGame.SetActive(true);
         startScene.SetActive(false);
         currentScene = playerController.NextScene();
-        
+
         SetScene(currentScene, 0);
         indextextScene++;
     }
@@ -100,7 +100,6 @@ public class SceneManagers : MonoBehaviour
         CheckIfSceneFinish();
         SetScene(currentScene, indextextScene);
         indextextScene++;
-
        
     }
 }
