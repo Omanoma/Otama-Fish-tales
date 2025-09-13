@@ -86,4 +86,5 @@ public class MiniGame3 : MonoBehaviour
         touchStar = true;
 
     }
+
 }
