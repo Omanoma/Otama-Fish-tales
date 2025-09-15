@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using TMPro;
 using DG.Tweening;
 using UnityEngine;
@@ -5,7 +6,7 @@ using NUnit.Framework.Interfaces;
 using System.Collections;
 //using Unity.VisualScripting;
 
-public class MiniGame4 : MonoBehaviour
+public class MiniGame4 : IMinigame
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     [SerializeField] GameObject water;
@@ -17,7 +18,7 @@ public class MiniGame4 : MonoBehaviour
 
     private bool onSurface = true;
     private bool reactOnTime = true;
-    void Start()
+    void OnEnable()
     {
         gameStart = true;
         StartCoroutine(UnderTimer());
@@ -52,7 +53,7 @@ public class MiniGame4 : MonoBehaviour
         float random = Random.Range(4, 6);
         while (gameStart && round > 0)
         {
-            trafficLight.text = (onSurface) ? "DOWN" :"UP" ;
+            trafficLight.text = (onSurface) ? "DOWN" : "UP";
             reactOnTime = true;
             yield return new WaitForSeconds(random);
             if (reactOnTime) break;
@@ -70,6 +71,20 @@ public class MiniGame4 : MonoBehaviour
         {
             trafficLight.text = "You Failed";
         }
-        
+
     }   
+    
+    public override List<float> Result()
+    {
+        // 0 - trust, 1 - romance, 2 - surival
+        if (round <= 0 && result == 4)
+        {
+            return new List<float> { 0, 1, 0 };
+        }
+        else
+        {
+            return new List<float> { 0, 0, 0 };
+        }
+
+    }
 }

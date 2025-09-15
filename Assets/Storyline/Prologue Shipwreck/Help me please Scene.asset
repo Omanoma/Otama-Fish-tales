@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c91dfa52a783a747ab57f92a11835d0, type: 3}
+  m_Name: Help me please Scene
+  m_EditorClassIdentifier: Assembly-CSharp::SceneObject
+  sceneName: Help me please Scene
+  chooseScene: 0
+  backgroundScene: {fileID: 0}
+  textScene:
+  - character: 0
+    speech: "Kael\u2019s lips curve into the faintest smile. His grip tightens, hauling
+      you further onto the sand."
+  - character: 1
+    speech: "Then you\u2019ll live. I\u2019ll make sure of it."

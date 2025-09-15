@@ -11,4 +11,6 @@ public class MainSceneObject : ScriptableObject
 {
     public string title;
     public List<SceneObject> scenes;
+
+    public GameObject minigame; 
 }

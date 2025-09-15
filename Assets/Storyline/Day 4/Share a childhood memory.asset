@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c91dfa52a783a747ab57f92a11835d0, type: 3}
+  m_Name: Share a childhood memory
+  m_EditorClassIdentifier: Assembly-CSharp::SceneObject
+  sceneName: Share a childhood memory
+  chooseScene: 0
+  backgroundScene: {fileID: 0}
+  textScene:
+  - character: 0
+    speech: You tell him of fireflies and summer nights. His gaze lingers, soft as
+      the starlight above
+  - character: 2
+    speech: "When I was little, summers felt endless. I\u2019d chase fireflies in
+      the fields near my home\u2026 My mother used to laugh when I came back with
+      a jar full of them. She\u2019d say it looked like I was carrying the stars
+      themselves."
+  - character: 3
+    speech: Kael tilts his head, eyes fixed on yours. His fins twitch faintly, betraying
+      curiosity.
+  - character: 2
+    speech: "I\u2019d hold the jar up to my face and pretend I was lost in the night
+      sky. The fireflies always escaped in the end\u2026 but for a moment, I thought
+      I was holding the universe in my hands."
+  - character: 3
+    speech: Silence. The waves hush against the sand. Then Kael breathes out a low,
+      almost reverent sound
+  - character: 1
+    speech: "Your eyes\u2026 brighter than these stars."

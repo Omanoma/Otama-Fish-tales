@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MainSceneObject
   title: "Day 2 \u2013 Hunger"
   scenes:
-  - {fileID: 11400000, guid: 816e5ecf4d86a8f498f410fb55630670, type: 2}
   - {fileID: 11400000, guid: e40705d2c1cb09a47ae36b17fc2700df, type: 2}
+  minigame: {fileID: 5235924382767225742, guid: b1dac54e191121143bc24ced5ebb484a, type: 3}

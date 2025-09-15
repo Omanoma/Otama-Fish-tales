@@ -6,13 +6,14 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public class MiniGame3 : MonoBehaviour
+public class MiniGame3 : IMinigame
 {
     [SerializeField] List<GameObject> stars;
     [SerializeField] List<Image> starsGlow;
     List<int> starIndex = new List<int>();
     int touchcount = 0;
     private bool touchStar = false;
+    private bool result = true;
     void OnEnable()
     {
         SetUp();
@@ -64,10 +65,15 @@ public class MiniGame3 : MonoBehaviour
             {
                 Glowing(starsGlow[item]);
                 touchcount++;
-                if (touchcount == starIndex.Count) Debug.Log("True");
+                if (touchcount == starIndex.Count)
+                {
+                    result = true;
+                    touchStar = false;
+                } 
             }
             else
             {
+                result = false;
                 touchStar = false;
                 Debug.Log("False");
             }
@@ -84,6 +90,20 @@ public class MiniGame3 : MonoBehaviour
         }
         yield return new WaitForEndOfFrame();
         touchStar = true;
+
+    }
+
+        public override List<float> Result()
+    {
+        // 0 - trust, 1 - romance, 2 - surival
+        if (result)
+        {
+            return new List<float> { 0, 1, 0 };
+        }
+        else
+        {
+            return new List<float> { 0, 0, 0 };
+        }
 
     }
 

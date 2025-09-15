@@ -10,16 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5c91dfa52a783a747ab57f92a11835d0, type: 3}
-  m_Name: Prologue Shipwreck 1
+  m_Name: Refuse politely
   m_EditorClassIdentifier: Assembly-CSharp::SceneObject
-  sceneName: 'Prologue: Shipwreck'
+  sceneName: Refuse politely
+  chooseScene: 0
   backgroundScene: {fileID: 0}
   textScene:
   - character: 0
-    speech: Thunder splits the sky. The sea roars. Your boat cracks against the rocks,
-      swallowed by the storm.
-  - character: 3
-    speech: "Darkness\u2026 silence\u2026 then\u2014"
-  - character: 3
-    speech: You awaken on a beach. The sun burns your skin. Your lips are dry. And
-      in the shallow waves, a strange figure watches you with shimmering eyes.
+    speech: You wrap your arms around yourself, trembling. Kael studies you silently,
+      then turns his gaze back to the flames.

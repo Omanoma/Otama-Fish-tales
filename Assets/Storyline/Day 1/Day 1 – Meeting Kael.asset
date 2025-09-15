@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MainSceneObject
   title: "Day 1 \u2013 Meeting Kael"
   scenes:
-  - {fileID: 11400000, guid: 245771929dbc8874185461138651e53d, type: 2}
   - {fileID: 11400000, guid: b37edd738d619374697223544dbf074a, type: 2}
+  minigame: {fileID: 0}

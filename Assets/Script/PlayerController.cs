@@ -13,9 +13,9 @@ public class PlayerController : MonoBehaviour
     int mainsceneObject = 0;
     int sceneObject = -1;
 
-    private int trust = 0;
-    private int romance = 0;
-    private int surival = 3;
+    private float trust = 0;
+    private float romance = 0;
+    private float surival = 3;
 
     public SceneObject NextScene()
     {
@@ -39,7 +39,7 @@ public class PlayerController : MonoBehaviour
         return new SceneObject();
     }
 
-    public void UpdateStat(int t, int r, int s)
+    public void UpdateStat(float t, float r, float s)
     {
         trust += t;
         romance += r;

@@ -4,7 +4,7 @@ using TMPro;
 using System;
 using System.Linq;
 
-public class MiniGame2 : MonoBehaviour
+public class MiniGame2 : IMinigame
 {
     [SerializeField] List<GameObject> fireItems;
     [SerializeField] Transform place;
@@ -20,7 +20,8 @@ public class MiniGame2 : MonoBehaviour
 
     int countPress = 0;
     int round = 0;
-    
+    int result = 0;
+
 
     private void OnEnable()
     {
@@ -38,13 +39,15 @@ public class MiniGame2 : MonoBehaviour
         else
         {
             timerStart = false;
-            
+
         }
 
         if (timerStart && time >= 0 && countPress == 3 && round <= 3)
         {
+            bool r = CheckResult();
 
-            Debug.Log($"Result Round {round} : {CheckResult()}");
+            Debug.Log($"Result Round {round} : {r}");
+            result = (r) ? result + 1 : result - 1;
             time += 7;
             countPress = 0;
             RestartGame();
@@ -115,6 +118,20 @@ public class MiniGame2 : MonoBehaviour
             if (userInput[i].name != correctOrder[i].name) return false;
         }
         return true;
+    }
+    
+    public override List<float> Result()
+    {
+        // 0 - trust, 1 - romance, 2 - surival
+        if (result < 0 )
+        {
+            return new List<float> { 0.5f, 0, 1f };
+        }
+        else
+        {
+            return new List<float> { 0, 0, -1 };
+        }
+
     }
 }
   

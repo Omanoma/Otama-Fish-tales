@@ -10,11 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5c91dfa52a783a747ab57f92a11835d0, type: 3}
-  m_Name: Day1_1
+  m_Name: Who are you Scene
   m_EditorClassIdentifier: Assembly-CSharp::SceneObject
-  sceneName: 'Day 1: The Stranger in the Water'
+  sceneName: Who are you Scene
+  chooseScene: 0
   backgroundScene: {fileID: 0}
   textScene:
   - character: 0
-    speech: 'The figure emerges: humanoid, with scales glinting under the sun, a
-      strong tail flicking nervously'
+    speech: Kael recoils, his fin flicking water across your face. His voice sharpens
+  - character: 1
+    speech: The one who pulled you from death. Nothing more.

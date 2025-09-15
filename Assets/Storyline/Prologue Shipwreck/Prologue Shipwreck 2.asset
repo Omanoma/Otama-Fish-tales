@@ -16,14 +16,29 @@ MonoBehaviour:
   chooseScene: 1
   backgroundScene: {fileID: 0}
   textScene:
+  - character: 3
+    speech: Thunder cracks. Wood splinters. A scream swallowed by the sea.
+  - character: 2
+    speech: "The ocean drags me under. My lungs burn. I thrash, reaching for air,
+      for light\u2014 Then, nothing."
+  - character: 2
+    speech: ----
+  - character: 0
+    speech: 'Fade in: golden sand. Waves kiss your skin. A shadow looms above.'
   - character: 1
-    speech: "\u2026Are you alive?"
+    speech: "\u201C\u2026Alive. You\u2019re alive."
+  - character: 0
+    speech: You blink. A figure with glimmering scales and sharp eyes crouches at
+      the shoreline. His hair drips with saltwater. His hand is webbed, but gentle,
+      pressing against your arm.
   buttonChooses:
   - choice: "Help me, please\u2026"
+    specialFeature: {fileID: 11400000, guid: 3a643611dfc79ea4495c91726a111834, type: 2}
     trust: 1
     romance: 0
     surival: 0
   - choice: Who are you?!
+    specialFeature: {fileID: 11400000, guid: 22b28e607e5d8dd4a987ee26feaa1f3a, type: 2}
     trust: 0
     romance: 0
     surival: 1

@@ -18,9 +18,9 @@ public struct ButtonChoose
 {
     public string choice;
 
-    public object specialFeature;
+    public SceneObject specialFeature;
 
-    public int trust;
-    public int romance;
-    public int surival;
+    public float  trust;
+    public float romance;
+    public float surival;
 }

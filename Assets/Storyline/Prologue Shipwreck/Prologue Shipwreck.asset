@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MainSceneObject
   title: 
   scenes:
-  - {fileID: 11400000, guid: 55bfe88cac991954ab4b28f96f32a85a, type: 2}
   - {fileID: 11400000, guid: 7999285c0b63a5f4d9b88a9b25d15236, type: 2}
+  minigame: {fileID: 0}

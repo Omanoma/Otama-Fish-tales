@@ -17,15 +17,17 @@ MonoBehaviour:
   backgroundScene: {fileID: 0}
   textScene:
   - character: 3
-    speech: "The night grows cold. You gather driftwood, but it\u2019s not enough."
+    speech: Driftwood piled near rocks. Wind sharpens
   - character: 1
-    speech: "I can keep you warm\u2026 if you don\u2019t mind"
+    speech: "Fire. Without it, you\u2019ll freeze tonight."
   buttonChooses:
   - choice: Accept his warmth
+    specialFeature: {fileID: 11400000, guid: a7f4467da2e057b4bb8a64e71b61799e, type: 2}
     trust: 0
     romance: 1
     surival: 0
   - choice: Refuse politely
+    specialFeature: {fileID: 11400000, guid: 2f81e0e014c8e2b4990e79baaaf787f4, type: 2}
     trust: 0
     romance: 0
     surival: 0

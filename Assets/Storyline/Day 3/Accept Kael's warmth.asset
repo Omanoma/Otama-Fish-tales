@@ -10,10 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5c91dfa52a783a747ab57f92a11835d0, type: 3}
-  m_Name: Day 2_1
+  m_Name: Accept Kael's warmth
   m_EditorClassIdentifier: Assembly-CSharp::SceneObject
-  sceneName: Day 2_1
+  sceneName: Accept Kael's warmth Scene
+  chooseScene: 0
   backgroundScene: {fileID: 0}
   textScene:
-  - character: 3
-    speech: Your stomach growls. Kael brings seaweed and clams from the tide pools.
+  - character: 0
+    speech: You shiver. Kael drapes an arm around you, scales cool but his body heat
+      steady. He hums softly, a sound like waves against rocks.
+  - character: 1
+    speech: "Rest. I\u2019ll watch the fire."
