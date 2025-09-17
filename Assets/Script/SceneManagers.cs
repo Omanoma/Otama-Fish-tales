@@ -18,6 +18,7 @@ public class SceneManagers : MonoBehaviour
     [SerializeField] Image character2;
     [SerializeField] TextMeshProUGUI textsection;
     [SerializeField] TextMeshProUGUI character;
+    [SerializeField] ChangeScene changeScene;
 
     private SceneObject currentScene;
 
@@ -87,10 +88,17 @@ public class SceneManagers : MonoBehaviour
     
     }
 
+    private void GetButtonScene(SceneObject sceneObject)
+    {
+        currentScene = sceneObject;
+        indextextScene = 0;
+    }
+
 
     public void UpdateStat(ButtonChoose buttonChoose)
     {
         playerController.UpdateStat(buttonChoose.trust, buttonChoose.romance, buttonChoose.surival);
+        GetButtonScene(buttonChoose.specialFeature);
         nextScene();
 
     }

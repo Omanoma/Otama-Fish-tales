@@ -9,7 +9,14 @@ public class PlayerController : MonoBehaviour
     [SerializeField] List<MainSceneObject> mainSceneObjects;
     [SerializeField] List<SceneObject> endScene;
 
+    [SerializeField] Transform minigameTransform;
+
+
+
     SceneObject currentScene;
+    GameObject currentMiniGame;
+
+    IMinigame minigame;
     int mainsceneObject = 0;
     int sceneObject = -1;
 
@@ -23,7 +30,7 @@ public class PlayerController : MonoBehaviour
         {
             return GetEndingScene();
         }
-        else if (sceneObject >= mainSceneObjects[mainsceneObject].scenes.Count-1)
+        else if (sceneObject >= mainSceneObjects[mainsceneObject].scenes.Count - 1)
         {
             mainsceneObject++;
             sceneObject = 0;
@@ -44,6 +51,13 @@ public class PlayerController : MonoBehaviour
         trust += t;
         romance += r;
         surival += s;
+    }
+
+    private void SetupMiniGame()
+    {
+        currentMiniGame = Instantiate(mainSceneObjects[mainsceneObject].minigame, minigameTransform);
+        minigame = currentMiniGame.GetComponent<IMinigame>();
+        minigame.StartGame();
     }
 
 
