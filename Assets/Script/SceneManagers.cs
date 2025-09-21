@@ -29,9 +29,8 @@ public class SceneManagers : MonoBehaviour
         sceneGame.SetActive(true);
         startScene.SetActive(false);
         currentScene = playerController.NextScene();
-
-        SetScene(currentScene, 0);
-        indextextScene++;
+        changeScene.SetText(playerController.SceneTitle());
+        changeScene.gameObject.SetActive(true);
     }
 
 
@@ -45,8 +44,6 @@ public class SceneManagers : MonoBehaviour
         {
             var other = scene as ChoooseSceneObject;
             int count = 0;
-            //textsection.text = scene.textScene[index].speech;
-            //character.text = scene.textScene[index].character.ToString();
             foreach (var item in other.buttonChooses)
             {
                 var choice = item; // prevent closure bug
@@ -71,21 +68,24 @@ public class SceneManagers : MonoBehaviour
 
     }
 
-    private void CheckIfSceneFinish()
+    private bool CheckIfSceneFinish()
     {
-    
+
         if (currentScene.chooseScene && currentScene.textScene.Count + 1 <= indextextScene)
         {
             currentScene = playerController.NextScene();
             indextextScene = 0;
+            return playerController.CheckifStartOfScene();
 
         }
         else if (!currentScene.chooseScene && currentScene.textScene.Count <= indextextScene)
         {
             currentScene = playerController.NextScene();
             indextextScene = 0;
+            return playerController.CheckifStartOfScene(); ;
         }
-    
+        return false;
+
     }
 
     private void GetButtonScene(SceneObject sceneObject)
@@ -100,14 +100,29 @@ public class SceneManagers : MonoBehaviour
         playerController.UpdateStat(buttonChoose.trust, buttonChoose.romance, buttonChoose.surival);
         GetButtonScene(buttonChoose.specialFeature);
         nextScene();
-
     }
 
     public void nextScene()
     {
-        CheckIfSceneFinish();
-        SetScene(currentScene, indextextScene);
-        indextextScene++;
-       
+        bool endScene = CheckIfSceneFinish();
+        if (!endScene)
+        {
+            SetScene(currentScene, indextextScene);
+            indextextScene++; 
+            changeScene.gameObject.SetActive(false);
+        }
+        else
+        {
+            changeScene.SetText(playerController.SceneTitle());
+            changeScene.gameObject.SetActive(true);
+        }
+
+    }
+
+    public void nextScene1()
+    {
+            SetScene(currentScene, indextextScene);
+            indextextScene++;
+            changeScene.gameObject.SetActive(false);
     }
 }

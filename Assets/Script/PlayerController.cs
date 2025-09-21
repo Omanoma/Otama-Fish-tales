@@ -40,6 +40,10 @@ public class PlayerController : MonoBehaviour
         sceneObject++;
         return mainSceneObjects[mainsceneObject].scenes[sceneObject];
     }
+    public bool CheckifStartOfScene()
+    {
+        return sceneObject == 0;
+    }
 
     public SceneObject GetEndingScene()
     {
@@ -51,6 +55,17 @@ public class PlayerController : MonoBehaviour
         trust += t;
         romance += r;
         surival += s;
+    }
+
+    public string SceneTitle()
+    {
+        return mainSceneObjects[mainsceneObject].title;
+    }
+
+    public bool IsGameTime(int textIndex)
+    {
+        int count = sceneObject + textIndex;
+        return count == 2;
     }
 
     private void SetupMiniGame()

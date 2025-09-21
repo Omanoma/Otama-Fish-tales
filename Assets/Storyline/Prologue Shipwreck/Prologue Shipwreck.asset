@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 100d622a67d8b3e45b86cca84bb15565, type: 3}
   m_Name: Prologue Shipwreck
   m_EditorClassIdentifier: Assembly-CSharp::MainSceneObject
-  title: 
+  title: "Prologue \u2014 Shipwreck"
   scenes:
   - {fileID: 11400000, guid: 7999285c0b63a5f4d9b88a9b25d15236, type: 2}
   minigame: {fileID: 0}
