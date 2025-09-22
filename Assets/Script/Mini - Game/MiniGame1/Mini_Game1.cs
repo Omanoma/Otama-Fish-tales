@@ -46,7 +46,14 @@ public class Mini_Game1 : IMinigame
 
     public void clickButtonForCorrectItem(bool poisonsFoodBool)
     {
-        if (indexFood < 0 && !resultBool) return;
+        if (indexFood < 0 || !resultBool)
+        {
+            Result();
+            FinishGame();
+            return;
+            
+        }
+        
         MiniGame1Food food = kielGathering[indexFood].GetComponent<MiniGame1Food>();
         if (poisonsFoodBool)
         {
@@ -58,9 +65,10 @@ public class Mini_Game1 : IMinigame
         }
 
         result = (food.poisonsFood == poisonsFoodBool) ? result + 1 : result - 1;
-        Debug.Log($"Item:{indexFood}      {food.poisonsFood == poisonsFoodBool}");
+        
         indexFood--;
         resultBool = (food.poisonsFood == poisonsFoodBool);
+        Debug.Log($"Item:{indexFood}      {food.poisonsFood == poisonsFoodBool}");
         //food.poisonsFood;
 
     }

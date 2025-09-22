@@ -65,14 +65,16 @@ public class PlayerController : MonoBehaviour
     public bool IsGameTime(int textIndex)
     {
         int count = sceneObject + textIndex;
-        return count == 2;
+        return count == 1 && mainSceneObjects[mainsceneObject].minigame != null;
     }
 
-    private void SetupMiniGame()
+    public void SetupMiniGame()
     {
+
         currentMiniGame = Instantiate(mainSceneObjects[mainsceneObject].minigame, minigameTransform);
         minigame = currentMiniGame.GetComponent<IMinigame>();
-        minigame.StartGame();
+        minigame.MiniGamePlaceHolder =  minigameTransform.gameObject;
+        minigame.StartGame(); 
     }
 
 

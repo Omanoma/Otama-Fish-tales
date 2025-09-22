@@ -1,5 +1,6 @@
  using System.Collections.Generic;
 using TMPro;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -105,10 +106,14 @@ public class SceneManagers : MonoBehaviour
     public void nextScene()
     {
         bool endScene = CheckIfSceneFinish();
-        if (!endScene)
+        if (playerController.IsGameTime(indextextScene))
+        {
+            playerController.SetupMiniGame();
+        }
+        else if (!endScene)
         {
             SetScene(currentScene, indextextScene);
-            indextextScene++; 
+            indextextScene++;
             changeScene.gameObject.SetActive(false);
         }
         else
@@ -121,8 +126,9 @@ public class SceneManagers : MonoBehaviour
 
     public void nextScene1()
     {
-            SetScene(currentScene, indextextScene);
-            indextextScene++;
-            changeScene.gameObject.SetActive(false);
+        SetScene(currentScene, indextextScene);
+        indextextScene++;
+        changeScene.gameObject.SetActive(false);
     }
+
 }
